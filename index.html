@@ -8,32 +8,35 @@
   </head>
   <body>
     <header>
-      <img id="intro-pic" src="./assets/images/bg-pattern-intro-desktop.svg" alt="Background" />
+      <img id="intro-pic" src="./images/bg-pattern-intro-desktop.svg" alt="Background" />
       <nav>
 
-        <img id="head-logo" src="./assets/images/logo.svg" alt="Logo" />
+        <img id="head-logo" src="./images/logo.svg" alt="Logo" />
         <ul id="nav-list">
-          <li><a href="#">Product<img class="arrow" src="./assets/images/icon-arrow-light.svg" alt="Arrow"></a></li>
-          <li><a href="#">Company<img class="arrow" src="./assets/images/icon-arrow-light.svg" alt="Arrow"></a></li>
-          <li><a id="connect-btn" href="#">Connect<img class="arrow" src="./assets/images/icon-arrow-light.svg" alt="Arrow"></a></li>
+          <li><a href="#">Product<img class="arrow" src="./images/icon-arrow-light.svg" alt="Arrow"></a></li>
+          <li><a href="#">Company<img class="arrow" src="./images/icon-arrow-light.svg" alt="Arrow"></a></li>
+          <li>
+            <a id="connect-btn" href="#">Connect<img class="arrow" src="./images/icon-arrow-light.svg" alt="Arrow"></a>
+            <div class="connect-dropdown">
+              <ul>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Newsletter</a></li>
+                <li><a href="#">LinkedIn</a></li>
+              </ul>
+            </div>
+          </li>
         </ul>
-        <div class="connect-dropdown">
-          <ul>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Newsletter</a></li>
-            <li><a href="#">LinkedIn</a></li>
-          </ul>
-        </div>
+        
         <ul id="sign-list">
           <li><a href="#">Login</a></li>
           <li><a href="#">Sign Up</a></li>
         </ul>
-        <img id="burger-menu" src="./assets/images/icon-hamburger.svg" alt="Burger Menu">
-        <div class="mobile-menu">
+        <img id="burger-menu" src="./images/icon-hamburger.svg" alt="Burger Menu">
+        <div class="mobile-menu" style="display: none;">
           <ul id="mobile-nav-list">
-            <li><a href="#">Product<img class="arrow" src="./assets/images/icon-arrow-dark.svg" alt="Arrow"></a></li>
-            <li><a href="#">Company<img class="arrow" src="./assets/images/icon-arrow-dark.svg" alt="Arrow"></a></li>
-            <li><a id="mobile-connect-btn" href="#">Connect<img class="arrow" src="./assets/images/icon-arrow-dark.svg" alt="Arrow"></a></li>
+            <li><a href="#">Product<img class="arrow" src="./images/icon-arrow-dark.svg" alt="Arrow"></a></li>
+            <li><a href="#">Company<img class="arrow" src="./images/icon-arrow-dark.svg" alt="Arrow"></a></li>
+            <li><a id="mobile-connect-btn" href="#">Connect<img class="arrow" src="./images/icon-arrow-dark.svg" alt="Arrow"></a></li>
           </ul>
           <div id="mobile-dropdown">
             <ul>
@@ -42,11 +45,13 @@
               <li><a href="#">LinkedIn</a></li>
             </ul>
           </div>
+          <div class="divider"></div>
           <ul id="mobile-sign-list">
             <li><a href="#">Login</a></li>
             <li><a href="#">Sign Up</a></li>
           </ul>
         </div>
+
       </nav>
       <div class="main-content">
         <h1>A modern publishing platform</h1>
@@ -85,11 +90,11 @@
         </ul>
       </div>
 
-      <img src="./assets/images/illustration-editor-desktop.svg" alt="Editor" />
+      <img src="./images/illustration-editor-desktop.svg" alt="Editor" />
     </section>
 
     <section id="section-2">
-      <img id="circles-pic" src="./assets/images/bg-pattern-circles.svg" alt="Circles" />
+      <img id="circles-pic" src="./images/bg-pattern-circles.svg" alt="Circles" />
       <div class="wrapper-content">
         <h3>State of the Art Infrastructure</h3>
         <p>
@@ -103,8 +108,8 @@
     </section>
 
     <section id="section-3">
-      <img id="phones-pic" src="./assets/images/illustration-phones.svg" alt="Phones" />
-      <img id="laptop-pic" src="./assets/images/illustration-laptop-desktop.svg" alt="Laptop" />
+      <img id="phones-pic" src="./images/illustration-phones.svg" alt="Phones" />
+      <img id="laptop-pic" src="./images/illustration-laptop-desktop.svg" alt="Laptop" />
       <ul>
         <li>
           <h4>Free, open, simple</h4>
@@ -132,7 +137,7 @@
     <footer>
       <div class="footer-info">
         <div class="footer-logo">
-          <img src="./assets/images/logo.svg" alt="Footer Logo">
+          <img src="./images/logo.svg" alt="Footer Logo">
         </div>
         
         <ul>

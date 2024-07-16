@@ -14,6 +14,7 @@ header{
 }
 
 nav{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -54,14 +55,27 @@ header ul li a{
 }
 
 .arrow{
+    position: absolute;
     margin-left: 10px;
+    margin-top: 5px;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.rotate-180 {
+    transform: rotate(180deg);
+    transition: transform 0.3s;
+}
+
+#nav-list li:last-child{
+    position: relative;
 }
 
 .connect-dropdown{
     display: none;
     position: absolute;
-    left: 540px;
-    top: 120px;
+    left: -20px;
+    top: 50px;
     background-color: white;
     padding: 35px 35px 25px 35px;
     width: 130px;
@@ -88,11 +102,7 @@ header ul li a{
     font-weight: bold;
 }
 
-.rotate-180 {
-    transform: rotate(180deg);
-    transition: transform 0.3s;
-}
-  
+
 
 #sign-list{
     margin-right: 150px;
@@ -361,7 +371,7 @@ footer img{
     gap: 200px;
 }
 
-@media screen and (max-width: 1115px){
+@media screen and (max-width: 1200px){
     nav{
         position: relative;
         display: block;
@@ -400,12 +410,15 @@ footer img{
         gap: 30px;
     }
 
-    #mobile-sign-list{
-        display: block;
+    .divider {
+        width: 130%;
+        height: 1px;
+        background-color: #ccc;
+        margin: 0;
     }
 
-    #mobile-sign-list li:last-child a{
-        padding: 30px;
+    #mobile-sign-list{
+        display: block;
     }
 
     #mobile-nav-list li,
@@ -413,6 +426,14 @@ footer img{
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    #mobile-sign-list li:last-child a {
+        margin-top: 20px;
+        padding: 15px 30px;
+        background: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+        color: white;
+        border-radius: 2em;
     }
 
     .mobile-menu{
@@ -423,14 +444,20 @@ footer img{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 100px;
-        padding: 30px 80px;
+        width: 200px;
+        padding: 30px 50px;
         background-color: white;
         font-family: 'Overpass';
         border-radius: 5px;
         float: right;
-        gap: 50px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         z-index: 2;
+    }
+
+    #mobile-dropdown,
+    .divider,
+    #mobile-sign-list{
+        margin-top: 20px;
     }
 
     .mobile-menu ul{
@@ -444,4 +471,19 @@ footer img{
     #mobile-dropdown{
         display: none;
     }
+
+    #mobile-dropdown ul {
+        align-items: center;
+        width: 250px;
+        background-color: #efeff1;
+        gap: 20px;
+        padding: 20px 0;
+        border-radius: 0.3em;
+        
+    }
+
+    #mobile-dropdown ul a {
+        color: #6e7885;
+    }
+
 }
