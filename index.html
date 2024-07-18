@@ -18,7 +18,7 @@
           <li>
             <a id="connect-btn" href="#">Connect<img class="arrow" src="./images/icon-arrow-light.svg" alt="Arrow"></a>
             <div class="connect-dropdown">
-              <ul>
+              <ul id="drop-list">
                 <li><a href="#">Contact</a></li>
                 <li><a href="#">Newsletter</a></li>
                 <li><a href="#">LinkedIn</a></li>
@@ -26,13 +26,15 @@
             </div>
           </li>
         </ul>
-        
         <ul id="sign-list">
           <li><a href="#">Login</a></li>
           <li><a href="#">Sign Up</a></li>
         </ul>
+
         <img id="burger-menu" src="./images/icon-hamburger.svg" alt="Burger Menu">
-        <div class="mobile-menu" style="display: none;">
+        <img id="exit-btn" src="./images/icon-close.svg" alt="Exit">
+
+        <div class="mobile-menu">
           <ul id="mobile-nav-list">
             <li><a href="#">Product<img class="arrow" src="./images/icon-arrow-dark.svg" alt="Arrow"></a></li>
             <li><a href="#">Company<img class="arrow" src="./images/icon-arrow-dark.svg" alt="Arrow"></a></li>
@@ -65,6 +67,7 @@
 
     <section id="section-1">
       <h3>Designed for the future</h3>
+      <img id="editor-img" src="./images/illustration-editor-desktop.svg" alt="Editor" />
       <div class="content-1">
         <ul>
           <li>
@@ -90,7 +93,7 @@
         </ul>
       </div>
 
-      <img src="./images/illustration-editor-desktop.svg" alt="Editor" />
+      
     </section>
 
     <section id="section-2">
@@ -135,11 +138,11 @@
     </section>
 
     <footer>
+      <div class="footer-logo">
+        <img src="./images/logo.svg" alt="Footer Logo">
+      </div>
+      
       <div class="footer-info">
-        <div class="footer-logo">
-          <img src="./images/logo.svg" alt="Footer Logo">
-        </div>
-        
         <ul>
           <li><a href="#">Product</a></li>
           <li><a href="#">Overview</a></li>
@@ -162,6 +165,7 @@
           <li><a href="#">LinkedIn</a></li>
         </ul>
       </div>
+      
     </footer>
 
     <script src="script.js"></script>
