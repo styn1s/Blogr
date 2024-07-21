@@ -1,4 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+    --primary-color: hsl(13, 100%, 72%);
+    --secondary-color: hsl(353, 100%, 62%);
+    --highlight-color: hsl(356, 100%, 66%);
+    --dark-color: hsl(208, 49%, 24%);
+    --light-color: white;
+    --background-color: hsl(240, 10%, 16%);
+    --text-color: lightgray;
+}
+
 html, body {
     margin: 0;
     height: 100%;
@@ -7,7 +18,7 @@ html, body {
 header{
     position: relative;
     height: 650px;
-    background-image: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -63,7 +74,7 @@ header ul li a{
     transition: transform 0.3s ease-in-out;
 }
 
-.rotate-180 {
+.rotate-180{
     transform: rotate(180deg);
     transition: transform 0.3s;
 }
@@ -109,8 +120,8 @@ header ul li a{
 
 #sign-list li:last-child a{
     padding: 15px 45px;
-    background-color: white;
-    color: hsl(356, 100%, 66%);
+    background-color: var(--light-color);
+    color: var(--highlight-color);
     border-radius: 2em;
     font-weight: bold;
     transition: 0.4s ease;
@@ -118,7 +129,7 @@ header ul li a{
 
 #sign-list li:last-child a:hover{
    background-color: hsl(355, 100%, 74%);
-   color: white;
+   color: var(--light-color);
    transition: 0.4s ease;
 }
 
@@ -171,8 +182,8 @@ nav, .main-content{
 }
 
 .main-content li:first-child a{
-    background-color: white;
-    color: hsl(356, 100%, 66%);
+    background-color: var(--light-color);
+    color: var(--highlight-color);
     border-radius: 2em;
     font-weight: 700;
     transition: 0.4s ease;
@@ -180,31 +191,31 @@ nav, .main-content{
 
 .main-content li:first-child a:hover{
     background-color: hsl(355, 100%, 74%);
-    color: white;
+    color: var(--light-color);
     border-radius: 2em;
     font-weight: 700;
     transition: 0.4s ease;
 }
 
 .main-content li:last-child a{
-    border: 1px solid white;
+    border: 1px solid var(--light-color);
     border-radius: 2em;
     font-weight: 700;
-    color: white;
+    color: var(--light-color);
     transition: 0.4s ease;
 }
 
 .main-content li:last-child a:hover{
-    background-color: white;
-    color: hsl(356, 100%, 66%);
+    background-color: var(--light-color);
+    color: var(--highlight-color);
     transition: 0.4s ease;
 }
 
-#section-1 {
+#section-1{
     position: relative;
     height: 900px;
     font-family: 'Overpass';
-    color: hsl(208, 49%, 24%);
+    color: var(--dark-color);
     overflow: hidden;
 }
 
@@ -241,7 +252,7 @@ nav, .main-content{
     width: 700px;
 }
 
-#section-2 {
+#section-2{
     position: relative;
     height: 400px;
     background-color: hsl(237, 17%, 21%);
@@ -252,7 +263,7 @@ nav, .main-content{
 
 #section-2 .wrapper-content{
     font-family: 'Overpass';
-    color: white;
+    color: var(--light-color);
     width: 35%;
     position: absolute;
     z-index: 1;
@@ -266,7 +277,7 @@ nav, .main-content{
 
 .wrapper-content p{
     line-height: 1.7;
-    color: lightgray;
+    color: var(--text-color);
 }
 
 #circles-pic{
@@ -279,7 +290,7 @@ nav, .main-content{
     position: relative;
     height: 1000px;
     font-family: 'Overpass';
-    color: hsl(208, 49%, 24%);
+    color: var(--dark-color);
 }
 
 #section-3 ul{
@@ -318,7 +329,7 @@ nav, .main-content{
 footer{
     display: flex;
     justify-content: space-between;
-    background-color: hsl(240, 10%, 16%);
+    background-color: var(--background-color);
     border-top-right-radius: 5em;
 }
 
@@ -336,7 +347,7 @@ footer ul li{
 
 footer ul li a{
     text-decoration: none;
-    color: lightgray;
+    color: var(--text-color);
 }
 
 footer ul li a:hover{
@@ -345,7 +356,7 @@ footer ul li a:hover{
 
 footer ul li:first-child a{
     font-weight: bold;
-    color: white;
+    color: var(--light-color);
 }
 
 footer ul li:first-child{
@@ -462,7 +473,7 @@ footer img{
         gap: 30px;
     }
 
-    .divider {
+    .divider{
         width: 130%;
         height: 1px;
         background-color: #ccc;
@@ -470,25 +481,25 @@ footer img{
     }
     
 
-    #mobile-sign-list li:last-child a {
+    #mobile-sign-list li:last-child a{
         margin-top: 20px;
         padding: 15px 40px;
-        background: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
-        color: white;
+        background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+        color: var(--light-color);
         border-radius: 2em;
     }
 
     .mobile-menu{
         display: hidden;
         position: absolute;
-        right: 100px;
-        top: 100px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        right: 100px;
+        top: 100px;
         width: 200px;
         padding: 30px 50px;
-        background-color: white;
+        background-color: var(--light-color);
         font-family: 'Overpass';
         border-radius: 5px;
         float: right;
@@ -514,17 +525,16 @@ footer img{
         display: none;
     }
 
-    #mobile-dropdown ul {
+    #mobile-dropdown ul{
         align-items: center;
         width: 250px;
         background-color: #efeff1;
         gap: 20px;
         padding: 20px 0;
-        border-radius: 0.3em;
-        
+        border-radius: 0.3em; 
     }
 
-    #mobile-dropdown ul a {
+    #mobile-dropdown ul a{
         color: #6e7885;
     }
 
@@ -561,7 +571,6 @@ footer img{
     }
 
     #circles-pic{
-        
         top: -560px;
         left: -220px;
     }
@@ -837,5 +846,4 @@ footer img{
         width: 80%;
         margin-bottom: 30px;
     }
-
 }
