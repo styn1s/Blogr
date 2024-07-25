@@ -9,3 +9,6 @@ This project is a landing page of Blogr company.
 Just download the files in this perository, and open index.html (**don't forget to install fonts from the specific folder**).
 
 **Note**: use browsers such as Chrome, Firefox, OperaGX, Edge (***not Explorer***).
+
+# Live site URL
+[Open it](https://styn1s.github.io/Blogr/).
