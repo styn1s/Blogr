@@ -33,10 +33,10 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 60px;
+  padding: 60px 150px 0 300px;
   font-family: "Ubuntu";
   font-weight: 500;
-  z-index: 2;
+  z-index: 1;
 }
 
 header ul {
@@ -57,10 +57,6 @@ header ul li a {
   color: #f8cbc9;
 }
 
-#nav-list {
-  margin-left: -240px;
-}
-
 #nav-list > li > a:hover {
   text-decoration: underline;
   color: var(--light-color);
@@ -73,7 +69,7 @@ header ul li a {
 .arrow {
   position: absolute;
   margin-left: 10px;
-  margin-top: 5px;
+  margin-top: 7px;
   transform: rotate(0deg);
   transition: transform 0.3s ease-in-out;
 }
@@ -118,12 +114,8 @@ header ul li a {
   font-weight: bold;
 }
 
-#sign-list {
-  margin-right: 150px;
-}
-
 #sign-list li:last-child a {
-  padding: 15px 45px;
+  padding: 15px 43px;
   background-color: var(--light-color);
   color: var(--highlight-color);
   border-radius: 2em;
@@ -143,13 +135,15 @@ main {
 }
 
 #head-logo {
-  margin: 0 0 0 150px;
-  z-index: 1;
+  position: absolute;
+  top: 65px;
+  left: 150px;
+  z-index: 2;
 }
 
 #intro-pic {
   position: absolute;
-  left: -460px;
+  left: -495px;
   top: -1400px;
   z-index: 0;
   width: 3300px;
@@ -172,14 +166,15 @@ main {
 
 main h1 {
   font-size: 4em;
+  font-weight: 500;
   margin-bottom: 0;
   text-align: center;
 }
 
 main h4 {
   font-size: 1.3em;
-  font-weight: 300;
-  margin: 20px 0 50px 0;
+  font-weight: 100;
+  margin: 20px 0 70px 0;
 }
 
 main ul {
@@ -264,7 +259,7 @@ main li:last-child a:hover {
 
 #section-1 img {
   position: absolute;
-  top: 60px;
+  top: 80px;
   right: -270px;
   width: 880px;
 }
@@ -272,25 +267,29 @@ main li:last-child a:hover {
 #section-2 {
   position: relative;
   height: 400px;
-  background-image: linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+  background-image: linear-gradient(
+    to right,
+    hsl(237, 17%, 21%),
+    hsl(237, 23%, 32%)
+  );
   overflow: hidden;
   border-top-right-radius: 5em;
   border-bottom-left-radius: 5em;
 }
 
 #section-2 .wrapper-content {
+  position: absolute;
+  top: 80px;
+  right: 205px;
+  width: 35%;
   font-family: "Overpass";
   color: var(--light-color);
-  width: 35%;
-  position: absolute;
   z-index: 1;
-  right: 150px;
-  top: 80px;
 }
 
 .wrapper-content h3 {
   font-size: 2.2em;
-  font-family: 500;
+  font-weight: 500;
 }
 
 .wrapper-content p {
@@ -313,10 +312,10 @@ main li:last-child a:hover {
 }
 
 #section-3 ul {
-  width: 37%;
+  width: 35%;
   float: right;
   list-style-type: none;
-  margin: 260px 120px 0 0;
+  margin: 240px 200px 0 0;
 }
 
 #section-3 ul li {
@@ -324,7 +323,7 @@ main li:last-child a:hover {
 }
 
 #section-3 h4 {
-  font-size: 1.5em;
+  font-size: 1.7em;
   margin-bottom: 25px;
 }
 
@@ -347,7 +346,7 @@ main li:last-child a:hover {
 
 footer {
   display: flex;
-  justify-content: space-between;
+  gap: 200px;
   background-color: var(--background-color);
   border-top-right-radius: 5em;
 }
@@ -395,7 +394,7 @@ footer img {
 .footer-info {
   display: flex;
   width: auto;
-  margin: 70px 500px 70px 0px;
+  margin: 70px 0;
   gap: 200px;
 }
 
@@ -409,43 +408,21 @@ footer img {
 }
 
 @media screen and (max-width: 1440px) {
-  #section-2 .wrapper-content {
-    width: 35%;
-    right: 205px;
-  }
-
   #section-3 ul {
     padding: 0;
-    margin-right: 90px;
   }
 
   #phones-pic {
     width: 550px;
     top: -470px;
   }
-
-  .footer-info {
-    margin-right: 240px;
-  }
 }
 
 @media screen and (max-width: 1200px) {
   #intro-pic {
-    left: -500px;
-  }
-
-  nav {
-    position: relative;
-    display: block;
-  }
-
-  #nav-list,
-  #sign-list {
-    display: none;
-  }
-
-  #head-logo {
-    margin-left: 100px;
+    top: -1100px;
+    left: -490px;
+    width: 2800px;
   }
 
   #burger-menu {
@@ -464,7 +441,7 @@ footer img {
   }
 
   main {
-    padding-top: 200px;
+    padding-top: 232px;
   }
 
   main h1 {
@@ -560,10 +537,6 @@ footer img {
     color: #6e7885;
   }
 
-  #section-1 img {
-    top: 120px;
-  }
-
   #section-1 h3 {
     font-size: 2em;
   }
@@ -619,6 +592,10 @@ footer img {
     margin-top: 280px;
   }
 
+  footer {
+    gap: 80px;
+  }
+
   .footer-info {
     margin-right: 170px;
     gap: 150px;
@@ -626,6 +603,30 @@ footer img {
 }
 
 @media screen and (max-width: 1024px) {
+  #intro-pic {
+    top: -1000px;
+    left: -500px;
+    width: 2600px;
+  }
+
+  nav {
+    padding: 65px 103px 0 0;
+    float: right;
+  }
+
+  #head-logo {
+    left: 103px;
+  }
+
+  #burger-menu {
+    margin: 0;
+  }
+
+  #nav-list,
+  #sign-list {
+    display: none;
+  }
+
   #section-1 {
     display: flex;
     flex-direction: column;
@@ -635,6 +636,7 @@ footer img {
   }
 
   #section-1 h4 {
+    margin-top: 30px;
     margin-bottom: 0;
   }
 
@@ -643,6 +645,7 @@ footer img {
     top: 0;
     right: 0;
     width: 600px;
+    margin-bottom: 20px;
   }
 
   #section-1 ul {
@@ -680,7 +683,7 @@ footer img {
     justify-content: center;
     text-align: center;
     right: auto;
-    margin: 0 auto;
+    margin: 0;
   }
 
   .wrapper-content h3 {
@@ -739,7 +742,7 @@ footer img {
   }
 
   .footer-logo {
-    margin: 100px auto;
+    margin: 100px auto 0;
   }
 
   .footer-logo img {
@@ -761,12 +764,23 @@ footer img {
 }
 
 @media screen and (max-width: 768px) {
+  header {
+    background-image: linear-gradient(
+      var(--primary-color),
+      var(--secondary-color)
+    );
+  }
+
   #head-logo {
-    margin-left: 30px;
+    left: 30px;
+  }
+
+  nav {
+    padding: 76px 30px 0 0;
   }
 
   #burger-menu {
-    margin: 10px 30px 0 0;
+    margin: 0;
   }
 
   #exit-btn {
@@ -785,17 +799,18 @@ footer img {
 
   main h1 {
     margin: 0 30px;
-    font-size: 2em;
+    font-size: 2.2em;
   }
 
   main h4 {
+    font-size: 1.22em;
     margin: 20px 30px 50px;
   }
 
   #intro-pic {
-    width: 1324px;
-    left: -330px;
-    top: -240px;
+    width: 1400px;
+    left: -355px;
+    top: -250px;
   }
 
   .mobile-menu {
@@ -804,12 +819,13 @@ footer img {
   }
 
   #section-1 h3 {
-    font-size: 1.5em;
+    font-size: 1.7em;
+    margin-top: 100px;
     margin-bottom: 40px;
   }
 
   #section-1 img {
-    width: 70%;
+    width: 108%;
   }
 
   #section-1 ul {
@@ -821,8 +837,8 @@ footer img {
   }
 
   #section-2 .wrapper-content {
-    width: 72%;
-    margin-bottom: 0;
+    width: 78%;
+    margin-bottom: 25px;
   }
 
   .wrapper-content p {
@@ -830,14 +846,18 @@ footer img {
   }
 
   .wrapper-content h3 {
-    font-size: 2em;
+    font-size: 2.4rem;
     margin-bottom: 20px;
     margin-top: 0;
   }
 
+  .content-1 p {
+    width: 104%;
+  }
+
   #phones-pic {
-    width: 22.375rem;
-    top: -750px;
+    width: 23.7rem;
+    top: -780px;
   }
 
   #circles-pic {
@@ -847,12 +867,12 @@ footer img {
   }
 
   #laptop-pic {
-    width: 80%;
+    width: 120%;
     top: 0px;
   }
 
   #section-3 {
-    height: 950px;
+    height: 1050px;
   }
 
   #section-3 ul {
@@ -862,31 +882,33 @@ footer img {
 }
 
 @media screen and (max-width: 374px) {
-    #phones-pic, #laptop-pic, #section-1 img {
-        width: 100%;
-    }
+  #phones-pic,
+  #laptop-pic,
+  #section-1 img {
+    width: 100%;
+  }
 
-    main h1 {
-        margin: 0;
-        font-size: 1.5rem;
-    }
+  main h1 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
 
-    main h4 {
-        margin: 20px 15px 50px;
-        font-size: 1rem;
-    }
+  main h4 {
+    margin: 20px 15px 50px;
+    font-size: 1rem;
+  }
 
-    main ul li a {
-        padding: 15px 20px;
-        font-size: .875rem;
-    }
+  main ul li a {
+    padding: 15px 20px;
+    font-size: 0.875rem;
+  }
 
-    .mobile-menu {
-        width: 9.2rem;
-    }
+  .mobile-menu {
+    width: 9.2rem;
+  }
 
-    #mobile-dropdown ul {
-        width: 12rem;
-        align-items: center;
-    }
+  #mobile-dropdown ul {
+    width: 12rem;
+    align-items: center;
+  }
 }
