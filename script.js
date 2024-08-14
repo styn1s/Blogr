@@ -77,7 +77,7 @@ function updateBackground() {
 
 function updateHeading() {
     const h1 = document.querySelector('h1');
-    if (window.innerWidth <= 490) {
+    if (window.innerWidth <= 533) {
         h1.innerHTML = 'A modern<br>publishing platform';
     } else {
         h1.innerHTML = 'A modern publishing platform';
