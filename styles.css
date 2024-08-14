@@ -15,7 +15,7 @@ body {
   overflow-x: clip;
 }
 
-header {
+.header {
   position: relative;
   height: 650px;
   background-image: linear-gradient(
@@ -40,7 +40,7 @@ nav {
   z-index: 1;
 }
 
-header ul {
+.header ul {
   display: flex;
   gap: 50px;
   position: relative;
@@ -49,11 +49,11 @@ header ul {
   z-index: 1;
 }
 
-header ul li {
+.header ul li {
   display: inline;
 }
 
-header ul li a {
+.header ul li a {
   text-decoration: none;
   color: #f8cbc9;
 }
@@ -135,14 +135,14 @@ main {
   position: relative;
 }
 
-#head-logo {
+.header__logo {
   position: absolute;
   top: 65px;
   left: 150px;
   z-index: 2;
 }
 
-#intro-pic {
+.header__background {
   position: absolute;
   left: -495px;
   top: -1400px;
@@ -439,7 +439,7 @@ footer img {
 }
 
 @media screen and (max-width: 1200px) {
-  #intro-pic {
+  .header__background {
     top: -1100px;
     left: -490px;
     width: 2800px;
@@ -624,7 +624,7 @@ footer img {
 }
 
 @media screen and (max-width: 1024px) {
-  #intro-pic {
+  .header__background {
     top: -1000px;
     left: -500px;
     width: 2600px;
@@ -635,7 +635,7 @@ footer img {
     float: right;
   }
 
-  #head-logo {
+  .header__logo {
     left: 103px;
   }
 
@@ -788,14 +788,14 @@ footer img {
 }
 
 @media screen and (max-width: 768px) {
-  header {
+  .header {
     background-image: linear-gradient(
       var(--primary-color),
       var(--secondary-color)
     );
   }
 
-  #head-logo {
+  .header__logo {
     left: 30px;
   }
 
@@ -831,7 +831,7 @@ footer img {
     margin: 20px 30px 70px;
   }
 
-  #intro-pic {
+  .header__background {
     width: 1400px;
     left: -355px;
     top: -240px;

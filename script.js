@@ -85,8 +85,8 @@ function updateHeading() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    updateView();
-    updateHeading();
+    /*updateView();
+    updateHeading();*/
     connectBtn.addEventListener("click", function (event) {
         dropdownMenu.style.display = (dropdownMenu.style.display === "block") ? "none" : "block";
         arrowImage.classList.toggle('rotate-180');
