@@ -1,13 +1,13 @@
-var connectBtn = document.getElementById("connect-btn");
-var dropdownMenu = document.querySelector(".connect-dropdown");
-var burgerIcon = document.getElementById("burger-menu");
+var connectBtn = document.querySelector(".nav__link");
+var dropdownMenu = document.querySelector(".dropdown");
+var burgerIcon = document.querySelector(".nav__burger-btn");
 var exitIcon = document.getElementById("exit-btn");
 var mobileMenu = document.querySelector(".mobile-menu");
 var mobileConnBtn = document.getElementById('mobile-connect-btn');
 var mobileDropdown = document.getElementById('mobile-dropdown');
 var mobileNavList = document.getElementById("mobile-nav-list");
 var mobileSignList = document.getElementById("mobile-sign-list");
-const arrowImage = connectBtn.querySelector('.arrow');
+const arrowImage = connectBtn.querySelector('.nav__arrow');
 const mobileArrowImage = mobileConnBtn.querySelector('.arrow');
 
 
@@ -68,7 +68,7 @@ function updateImages(imageType) {
 
 function updateBackground() {
     var windowWidth = window.innerWidth;
-    var introImage = document.getElementById("intro-pic")
+    var introImage = document.querySelector(".header__background");
 
     var imageType = windowWidth <= 768 ? "mobile" : "desktop";
     var introImagePath = `./images/bg-pattern-intro-${imageType}.svg`;

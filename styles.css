@@ -29,45 +29,44 @@ body {
   border-bottom-left-radius: 5em;
 }
 
-nav {
+.header__nav {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 60px 150px 0 300px;
+  padding: 76px 150px 0 300px;
   font-family: "Ubuntu";
   font-weight: 500;
   z-index: 1;
 }
 
-.header ul {
+.nav__list,
+.auth__list {
+  position: relative;
   display: flex;
   gap: 50px;
-  position: relative;
-  list-style-type: none;
-  padding: 0;
   z-index: 1;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
-.header ul li {
-  display: inline;
-}
-
-.header ul li a {
+.nav__item a,
+.auth__item a:first-child{
   text-decoration: none;
   color: #f8cbc9;
 }
 
-#nav-list > li > a:hover {
+.nav__item > a:hover {
   text-decoration: underline;
   color: var(--light-color);
 }
 
-#nav-list a:hover .arrow {
+.nav__arrow {
   content: url("./images/icon-arrow-white.svg");
 }
 
-.arrow {
+.nav__arrow {
   position: absolute;
   margin-left: 10px;
   margin-top: 7px;
@@ -80,11 +79,11 @@ nav {
   transition: transform 0.3s;
 }
 
-#nav-list li:last-child {
+.nav__item:last-child {
   position: relative;
 }
 
-.connect-dropdown {
+.dropdown {
   display: none;
   position: absolute;
   left: -20px;
@@ -98,24 +97,25 @@ nav {
   z-index: 1;
 }
 
-#drop-list {
+.dropdown__list {
   position: relative;
   display: flex;
   flex-direction: column;
   padding: 0;
   gap: 25px;
   margin: 0;
+  list-style-type: none;
 }
 
-#drop-list a {
+.dropdown__list a {
   color: black;
 }
 
-#drop-list a:hover {
+.dropdown__list a:hover {
   font-weight: bold;
 }
 
-#sign-list li:last-child a {
+.auth__item:last-child a {
   padding: 15px 43px;
   background-color: var(--light-color);
   color: var(--highlight-color);
@@ -124,13 +124,13 @@ nav {
   transition: 0.4s ease;
 }
 
-#sign-list li:last-child a:hover {
+.auth__item:last-child a:hover {
   background-color: hsl(355, 100%, 74%);
   color: var(--light-color);
   transition: 0.4s ease;
 }
 
-nav,
+.header__nav,
 main {
   position: relative;
 }
@@ -403,7 +403,7 @@ footer img {
 #mobile-nav-list,
 #mobile-dropdown ul,
 #mobile-sign-list,
-#burger-menu,
+.nav__burger-btn,
 #exit-btn {
   display: none;
 }
@@ -445,7 +445,7 @@ footer img {
     width: 2800px;
   }
 
-  #burger-menu {
+  .nav__burger-btn {
     display: block;
     margin-right: 100px;
     cursor: pointer;
@@ -630,7 +630,7 @@ footer img {
     width: 2600px;
   }
 
-  nav {
+  .header__nav {
     padding: 65px 103px 0 0;
     float: right;
   }
@@ -639,12 +639,12 @@ footer img {
     left: 103px;
   }
 
-  #burger-menu {
+  .nav__burger-btn {
     margin: 0;
   }
 
-  #nav-list,
-  #sign-list {
+  .nav__list,
+  .auth__list {
     display: none;
   }
 
@@ -799,11 +799,11 @@ footer img {
     left: 30px;
   }
 
-  nav {
+  .header__nav {
     padding: 76px 30px 0 0;
   }
 
-  #burger-menu {
+  .nav__burger-btn {
     margin: 0;
   }
 
