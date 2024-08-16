@@ -25,8 +25,8 @@ body {
   );
   background-size: cover;
   background-position: center;
-  overflow: hidden;
   border-bottom-left-radius: 5em;
+  overflow: hidden;
 }
 
 .header__nav {
@@ -38,6 +38,12 @@ body {
   font-family: "Ubuntu";
   font-weight: 500;
   z-index: 1;
+}
+
+.mobile-menu,
+.nav__burger-btn,
+.nav__exit-btn {
+  display: none;
 }
 
 .nav__list,
@@ -127,7 +133,7 @@ body {
 }
 
 .header__nav,
-main {
+.main-content {
   position: relative;
 }
 
@@ -146,7 +152,7 @@ main {
   width: 3300px;
 }
 
-main {
+.main-content {
   position: absolute;
   top: 0;
   width: 100%;
@@ -161,20 +167,20 @@ main {
   box-sizing: border-box;
 }
 
-main h1 {
+.main-content__title {
   font-size: 4em;
   font-weight: 500;
   margin-bottom: 0;
   text-align: center;
 }
 
-main h4 {
+.main-content__subtitle {
   font-size: 1.3em;
   font-weight: 100;
   margin: 20px 0 70px 0;
 }
 
-main ul {
+.main-content__cta-list {
   display: flex;
   list-style-type: none;
   gap: 20px;
@@ -182,13 +188,13 @@ main ul {
   padding-left: 0;
 }
 
-main ul li a {
+.main-content__cta-item a {
   padding: 15px 25px;
   font-family: "Ubuntu";
   text-decoration: none;
 }
 
-main li:first-child a {
+.main-content__cta-item:first-child a {
   background-color: var(--light-color);
   color: var(--highlight-color);
   border-radius: 2em;
@@ -196,7 +202,7 @@ main li:first-child a {
   transition: 0.4s ease;
 }
 
-main li:first-child a:hover {
+.main-content__cta-item:first-child a:hover {
   background-color: hsl(355, 100%, 74%);
   color: var(--light-color);
   border-radius: 2em;
@@ -204,7 +210,7 @@ main li:first-child a:hover {
   transition: 0.4s ease;
 }
 
-main li:last-child a {
+.main-content__cta-item:last-child a {
   border: 1px solid var(--light-color);
   border-radius: 2em;
   font-weight: 700;
@@ -212,13 +218,13 @@ main li:last-child a {
   transition: 0.4s ease;
 }
 
-main li:last-child a:hover {
+.main-content__cta-item:last-child a:hover {
   background-color: var(--light-color);
   color: var(--highlight-color);
   transition: 0.4s ease;
 }
 
-#section-1 {
+.features-section {
   position: relative;
   font-family: "Overpass";
   color: var(--dark-color);
@@ -226,7 +232,7 @@ main li:last-child a:hover {
   overflow: hidden;
 }
 
-#section-1 h3 {
+.features-section__title {
   width: fit-content;
   margin: 150px auto 80px auto;
   font-size: 2.5em;
@@ -234,34 +240,34 @@ main li:last-child a:hover {
   letter-spacing: -1px;
 }
 
-#section-1 h4 {
-  font-size: 1.7em;
-  margin-bottom: 20px;
-}
-
-#section-1 ul {
+.features-section__list {
   list-style-type: none;
   width: 35.2%;
   padding: 0;
   margin: 100px 0 230px 150px;
 }
 
-#section-1 ul li {
+.features-section__item {
   line-height: 1.7;
 }
 
-#section-1 ul li:last-child {
+.features-section__item-title {
+  font-size: 1.7em;
+  margin-bottom: 20px;
+}
+
+.features-section__item:last-child {
   margin-top: 70px;
 }
 
-#section-1 img {
+.features-section__image {
   position: absolute;
   top: 80px;
   right: -270px;
   width: 880px;
 }
 
-#section-2 {
+.infrastructure-section {
   position: relative;
   height: 400px;
   background-image: linear-gradient(
@@ -274,7 +280,7 @@ main li:last-child a:hover {
   border-bottom-left-radius: 5em;
 }
 
-#section-2 .wrapper-content {
+.infrastructure-section__content {
   position: absolute;
   top: 80px;
   right: 205px;
@@ -284,23 +290,23 @@ main li:last-child a:hover {
   z-index: 1;
 }
 
-.wrapper-content h3 {
+.infrastructure-section__title {
   font-size: 2.2em;
   font-weight: 500;
 }
 
-.wrapper-content p {
+.infrastructure-section__description {
   line-height: 1.7;
   color: var(--text-color);
 }
 
-#circles-pic {
+.infrastructure-section__background-image {
   position: absolute;
   top: -510px;
   left: -215px;
 }
 
-#section-3 {
+.tools-section {
   position: relative;
   height: 1000px;
   font-family: "Overpass";
@@ -308,47 +314,65 @@ main li:last-child a:hover {
   background-color: #fafafa;
 }
 
-#section-3 ul {
+.tools-section__list {
   width: 35%;
   float: right;
   list-style-type: none;
   margin: 240px 200px 0 0;
+  padding: 0;
 }
 
-#section-3 ul li {
+.tools-section__item {
   line-height: 1.7;
 }
 
-#section-3 h4 {
+.tools-section__item-title {
   font-size: 1.7em;
   margin-bottom: 25px;
 }
 
-#section-3 p {
+.tools-section__item-description {
   margin-bottom: 70px;
 }
 
-#phones-pic {
+.tools-section__image--phones {
   position: absolute;
   z-index: 1;
   top: -470px;
   left: 120px;
 }
 
-#laptop-pic {
+.tools-section__image--laptop {
   position: absolute;
   left: -280px;
   top: 100px;
 }
 
-footer {
+.footer {
   display: flex;
   gap: 200px;
   background-color: var(--background-color);
   border-top-right-radius: 5em;
 }
 
-footer ul {
+.footer__logo {
+  flex-shrink: 0;
+}
+
+.footer__logo-image {
+  padding: 70px 0 0 150px;
+  width: auto;
+  height: auto;
+}
+
+.footer__content {
+  display: flex;
+  width: auto;
+  margin: 70px 0;
+  gap: 200px;
+}
+
+.footer__list {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -356,78 +380,50 @@ footer ul {
   font-weight: 400;
 }
 
-footer ul li {
+.footer__item {
   margin-bottom: 15px;
 }
 
-footer ul li a {
+.footer__item a {
   text-decoration: none;
   color: var(--text-color);
 }
 
-footer ul li a:hover {
+.footer__item a:hover {
   text-decoration: underline;
 }
 
-footer ul li:first-child a {
+.footer__item:first-child {
+  margin-bottom: 40px;
+}
+
+.footer__item:first-child a {
   font-weight: bold;
   color: var(--light-color);
 }
 
-footer ul li:first-child {
-  margin-bottom: 40px;
-}
-
-.footer-logo {
-  flex-shrink: 0;
-}
-
-footer img {
-  padding: 70px 0 0 150px;
-  width: auto;
-  height: auto;
-}
-
-.footer-info {
-  display: flex;
-  width: auto;
-  margin: 70px 0;
-  gap: 200px;
-}
-
-.mobile-menu,
-.nav__burger-btn,
-.nav__exit-btn {
-  display: none;
-}
-
 @media screen and (max-width: 1440px) {
-  #section-3 ul {
-    padding: 0;
+  .infrastructure-section__title {
+    width: 115%;
   }
 
-  #phones-pic {
+  .tools-section__image--phones {
     width: 550px;
     top: -470px;
   }
-
-  .wrapper-content h3 {
-    width: 115%;
-  }
-  
 }
 
 @media screen and (max-width: 1380px) {
-  #section-2 .wrapper-content {
+  .infrastructure-section__content {
     right: 130px;
   }
 
-  #phones-pic {
-    left: 100px;
+  .tools-section__list {
+    margin-right: 120px;
   }
 
-  #section-3 ul {
-    margin-right: 120px;
+  .tools-section__image--phones {
+    left: 100px;
   }
 }
 
@@ -453,11 +449,11 @@ footer img {
     cursor: pointer;
   }
 
-  main {
+  .main-content {
     padding-top: 232px;
   }
 
-  main h1 {
+  .main-content__title {
     font-size: 3em;
   }
 
@@ -469,8 +465,8 @@ footer img {
     list-style-type: none;
   }
 
-  .mobile-menu__nav-list li,
-  .mobile-menu__auth-list li {
+  .mobile-menu__nav-item,
+  .mobile-menu__auth-item {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -503,7 +499,7 @@ footer img {
     margin: 0;
   }
 
-  .mobile-menu__auth-list li:last-child a {
+  .mobile-menu__auth-item:last-child a {
     padding: 15px 40px;
     color: var(--light-color);
     background: linear-gradient(
@@ -551,71 +547,71 @@ footer img {
     border-radius: 0.3em;
   }
 
-  .mobile-menu__dropdown ul a {
+  .mobile-menu__dropdown-list a {
     color: #6e7885;
   }
 
-  #section-1 h3 {
+  .features-section__title {
     font-size: 2em;
   }
 
-  #section-1 ul {
+  .features-section__list {
     margin-left: 100px;
     width: 37%;
   }
 
-  #phones-pic {
+  .infrastructure-section {
+    height: 330px;
+  }
+
+  .infrastructure-section__content {
+    width: 40%;
+    right: 80px;
+  }
+
+  .infrastructure-section__title {
+    width: 100%;
+    font-size: 1.3em;
+  }
+
+  .infrastructure-section__description {
+    font-size: 14px;
+  }
+
+  .infrastructure-section__background-image {
+    top: -560px;
+    left: -220px;
+  }
+
+  .tools-section__list {
+    margin-top: 280px;
+  }
+
+  .tools-section__item-title {
+    font-size: 1.3em;
+  }
+
+  .tools-section__item-description {
+    font-size: 14px;
+  }
+
+  .tools-section__image--phones {
     width: 440px;
     left: 90px;
     top: -380px;
   }
 
-  #section-2 .wrapper-content {
-    width: 40%;
-    right: 80px;
-  }
-
-  .wrapper-content h3 {
-    width: 100%;
-    font-size: 1.3em;
-  }
-
-  .wrapper-content p {
-    font-size: 14px;
-  }
-
-  #circles-pic {
-    top: -560px;
-    left: -220px;
-  }
-
-  #section-2 {
-    height: 330px;
-  }
-
-  #laptop-pic {
+  .tools-section__image--laptop {
     width: 800px;
     top: 180px;
     left: -230px;
   }
 
-  #section-3 h4 {
-    font-size: 1.3em;
+  .footer {
+    gap: 100px;
   }
 
-  #section-3 p {
-    font-size: 14px;
-  }
-
-  #section-3 ul {
-    margin-top: 280px;
-  }
-
-  footer {
-    gap: 80px;
-  }
-
-  .footer-info {
+  .footer__content {
     margin-right: 170px;
     gap: 150px;
   }
@@ -646,7 +642,7 @@ footer img {
     display: none;
   }
 
-  #section-1 {
+  .features-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -654,12 +650,7 @@ footer img {
     height: fit-content;
   }
 
-  #section-1 h4 {
-    margin-top: 30px;
-    margin-bottom: 0;
-  }
-
-  #section-1 img {
+  .features-section__image {
     position: relative;
     top: 0;
     right: 0;
@@ -667,35 +658,35 @@ footer img {
     margin-bottom: 20px;
   }
 
-  #section-1 ul {
+  .features-section__list {
     margin: 0 0 250px 0;
     width: 50%;
   }
 
-  #section-1 ul li {
+  .features-section__item {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
   }
 
-  #section-1 ul li:last-child {
+  .features-section__item:last-child {
     margin-top: 0;
   }
 
-  .content-1 {
+  .features-section__content {
     display: flex;
     justify-content: center;
   }
 
-  #section-2 {
+  .infrastructure-section {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 600px;
   }
 
-  #section-2 .wrapper-content {
+  .infrastructure-section__content {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -705,23 +696,17 @@ footer img {
     margin: 0;
   }
 
-  .wrapper-content h3 {
+  .infrastructure-section__title {
     font-size: 2.4rem;
     margin: 0 0 20px;
   }
 
-  .wrapper-content p {
+  .infrastructure-section__description {
     font-size: 16px;
     margin-top: 0;
   }
 
-  #phones-pic {
-    position: absolute;
-    left: auto;
-    top: -800px;
-  }
-
-  #section-3 {
+  .tools-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -730,48 +715,54 @@ footer img {
     padding: 100px 0;
   }
 
-  #laptop-pic {
-    position: relative;
-    left: 0;
-    top: -10px;
-    width: 800px;
-  }
-
-  #section-3 ul {
+  .tools-section__list {
     margin: 0;
     width: 50%;
   }
 
-  #section-3 ul li {
+  .tools-section__item {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
   }
 
-  #section-3 h4 {
+  .tools-section__item-title {
     font-size: 1.5em;
     margin-bottom: 0;
   }
 
-  #section-3 p {
+  .tools-section__item-description {
     margin-bottom: 0;
     font-size: 16px;
   }
 
-  footer {
+  .tools-section__image--phones {
+    position: absolute;
+    left: auto;
+    top: -800px;
+  }
+
+  .tools-section__image--laptop {
+    position: relative;
+    left: 0;
+    top: -10px;
+    width: 800px;
+  }
+
+  .footer {
     flex-direction: column;
   }
 
-  .footer-logo {
+  .footer__logo {
     margin: 100px auto 0;
   }
 
-  .footer-logo img {
+  .footer__logo-image {
     padding: 0;
   }
 
-  .footer-info {
+  .footer__content {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -780,7 +771,7 @@ footer img {
     margin-bottom: 100px;
   }
 
-  .footer-info ul {
+  .footer__list {
     text-align: center;
   }
 }
@@ -810,21 +801,21 @@ footer img {
     top: 66px;
   }
 
-  main {
+  .main-content {
     padding-top: 230px;
   }
 
-  main h1,
-  main h4 {
+  .main-content__title,
+  .main-content__subtitle {
     text-align: center;
   }
 
-  main h1 {
+  .main-content__title {
     margin: 0 30px;
     font-size: 2.2em;
   }
 
-  main h4 {
+  .main-content__subtitle {
     font-size: 1.22em;
     margin: 20px 30px 70px;
   }
@@ -840,78 +831,78 @@ footer img {
     top: 130px;
   }
 
-  #section-1 h3 {
+  .features-section__title {
     font-size: 1.7em;
     margin-top: 100px;
     margin-bottom: 40px;
   }
 
-  #section-1 img {
+  .features-section__image {
     width: 108%;
   }
 
-  #section-1 ul {
+  .features-section__list {
     width: 75%;
   }
 
-  #section-1 h4 {
+  .features-section__item-title {
     line-height: 1.2;
   }
 
-  #section-2 .wrapper-content {
+  .features-section__item-description{
+    width: 104%;
+  }
+
+  .infrastructure-section__content {
     width: 78%;
     margin-bottom: 25px;
   }
 
-  .content-1 p {
-    width: 104%;
-  }
-
-  #phones-pic {
-    width: 23.7rem;
-    top: -780px;
-  }
-
-  #circles-pic {
+  .infrastructure-section__background-image {
     width: 580px;
     top: -220px;
     left: -110px;
   }
 
-  #laptop-pic {
-    width: 120%;
-    top: 0px;
-  }
-
-  #section-3 {
+  .tools-section {
     padding: 50px 0;
   }
 
-  #section-3 ul {
+  .tools-section__list {
     width: 80%;
     margin-bottom: 30px;
+  }
+
+  .tools-section__image--phones {
+    width: 23.7rem;
+    top: -780px;
+  }
+
+  .tools-section__image--laptop {
+    width: 120%;
+    top: 0px;
   }
 }
 
 @media screen and (max-width: 374px) {
-  #phones-pic,
-  #laptop-pic,
-  #section-1 img {
+  .features-section__image,
+  .tools-section__image--phones,
+  .tools-section__image--laptop {
     width: 100%;
   }
 
-  main h1 {
+  .main-content__title {
     margin: 0;
     font-size: 2rem;
   }
 
-  main h4 {
+  .main-content__subtitle {
     margin: 20px 15px 50px;
     font-size: 1rem;
     width: 80%;
   }
 
-  main ul li a {
+  .main-content__cta-item a {
     padding: 15px 20px;
     font-size: 0.875rem;
   }
@@ -920,7 +911,7 @@ footer img {
     width: 9.2rem;
   }
 
-  .mobile-menu__dropdown ul {
+  .mobile-menu__dropdown-list {
     width: 12rem;
     align-items: center;
   }

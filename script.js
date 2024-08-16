@@ -60,8 +60,8 @@ function updateView() {
 }
 
 function updateImages(imageType) {
-    var editorImage = document.getElementById("editor-img");
-    var laptopImage = document.getElementById("laptop-pic");
+    var editorImage = document.querySelector(".features-section__image");
+    var laptopImage = document.querySelector(".tools-section__image--laptop");
     var editorImagePath = `./images/illustration-editor-${imageType}.svg`;
     var laptopImagePath = `./images/illustration-laptop-${imageType}.svg`;
     editorImage.src = editorImagePath;
