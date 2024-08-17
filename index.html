@@ -3,29 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="A modern publishing platform for building your online brand and growing your audience. Features an extensible editor, robust content management, and state-of-the-art infrastructure."
+    />
+    <meta
+      name="keywords"
+      content="blog, publishing, content management, editor, infrastructure, free, open source"
+    />
+    <meta name="author" content="Styn1s" />
+    <link rel="preload" href="styles.css" as="style" />
     <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
     />
-    <title>Blog Page</title>
+    <title>Blogr</title>
   </head>
   <body>
     <header class="header">
       <img
         class="header__background"
         src="./images/bg-pattern-intro-desktop.svg"
-        alt="Background"
+        alt=""
+        aria-hidden="true"
       />
-      <img class="header__logo" src="./images/logo.svg" alt="Blogr logo" />
-      <nav class="header__nav">
+      <img
+        class="header__logo"
+        src="./images/logo.svg"
+        alt="Blogr logo"
+        loading="lazy"
+      />
+      <nav class="header__nav" aria-label="Main navigation">
         <ul class="nav__list">
           <li class="nav__item">
             <a href="#"
               >Product<img
                 class="nav__arrow"
                 src="./images/icon-arrow-light.svg"
-                alt="Arrow"
+                alt=""
+                aria-hidden="true"
+                loading="lazy"
             /></a>
           </li>
           <li class="nav__item">
@@ -33,17 +52,25 @@
               >Company<img
                 class="nav__arrow"
                 src="./images/icon-arrow-light.svg"
-                alt="Arrow"
+                alt=""
+                aria-hidden="true"
+                loading="lazy"
             /></a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#"
+            <a
+              class="nav__link"
+              href="#"
+              aria-haspopup="true"
+              aria-expanded="false"
               >Connect<img
                 class="nav__arrow"
                 src="./images/icon-arrow-light.svg"
-                alt="Arrow"
+                alt=""
+                aria-hidden="true"
+                loading="lazy"
             /></a>
-            <div class="dropdown">
+            <div class="dropdown" role="menu">
               <ul class="dropdown__list">
                 <li class="dropdown__item"><a href="#contact">Contact</a></li>
                 <li class="dropdown__item">
@@ -61,45 +88,66 @@
           </ul>
         </div>
 
-        <img
+        <button
           class="nav__burger-btn"
-          src="./images/icon-hamburger.svg"
-          alt="Burger button menu"
-        />
-        <img
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <img
+            src="./images/icon-hamburger.svg"
+            alt="Burger button"
+            loading="lazy"
+          />
+        </button>
+
+        <button
           class="nav__exit-btn"
-          src="./images/icon-close.svg"
-          alt="Exit btn menu"
-        />
+          aria-label="Close menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <img src="./images/icon-close.svg" alt="Exit button" loading="lazy" />
+        </button>
 
         <div class="mobile-menu">
           <ul class="mobile-menu__nav-list">
             <li class="mobile-menu__nav-item">
-              <a href="#product"
+              <a href="#product" aria-expanded="false"
                 >Product<img
                   class="nav__arrow"
                   src="./images/icon-arrow-dark.svg"
-                  alt="Arrow"
+                  alt=""
+                  aria-hidden="true"
+                  loading="lazy"
               /></a>
             </li>
             <li class="mobile-menu__nav-item">
-              <a href="#company"
+              <a href="#company" aria-expanded="false"
                 >Company<img
                   class="nav__arrow"
                   src="./images/icon-arrow-dark.svg"
-                  alt="Arrow"
+                  alt=""
+                  aria-hidden="true"
+                  loading="lazy"
               /></a>
             </li>
             <li class="mobile-menu__nav-item">
-              <a id="mobile-connect-btn" href="#connect"
+              <a
+                id="mobile-connect-btn"
+                href="#connect"
+                aria-haspopup="true"
+                aria-expanded="false"
                 >Connect<img
                   class="nav__arrow"
                   src="./images/icon-arrow-dark.svg"
-                  alt="Arrow"
+                  alt=""
+                  aria-hidden="true"
+                  loading="lazy"
               /></a>
             </li>
           </ul>
-          <div class="mobile-menu__dropdown">
+          <div class="mobile-menu__dropdown" role="menu">
             <ul class="mobile-menu__dropdown-list">
               <li class="mobile-menu__dropdown-item">
                 <a href="#contact">Contact</a>
@@ -116,7 +164,7 @@
           <ul class="mobile-menu__auth-list">
             <li class="mobile-menu__auth-item"><a href="#login">Login</a></li>
             <li class="mobile-menu__auth-item">
-              <a href="#sing-up">Sign Up</a>
+              <a href="#sign-up">Sign Up</a>
             </li>
           </ul>
         </div>
@@ -125,9 +173,9 @@
 
     <main role="main" class="main-content">
       <h1 class="main-content__title">A modern publishing platform</h1>
-      <h4 class="main-content__subtitle">
+      <h2 class="main-content__subtitle">
         Grow your audience and build your online brand
-      </h4>
+      </h2>
       <ul class="main-content__cta-list">
         <li class="main-content__cta-item">
           <a href="#start-for-free">Start for Free</a>
@@ -138,19 +186,20 @@
       </ul>
     </main>
 
-    <section class="features-section">
-      <h3 class="features-section__title">Designed for the future</h3>
+    <section class="features-section" aria-labelledby="features-title">
+      <h2 class="features-section__title" id="features-title">Designed for the future</h2>
       <img
         class="features-section__image"
         src="./images/illustration-editor-desktop.svg"
-        alt="Editor image"
+        alt="Illustration of the editor"
+        loading="lazy"
       />
       <div class="features-section__content">
         <ul class="features-section__list">
           <li class="features-section__item">
-            <h4 class="features-section__item-title">
+            <h3 class="features-section__item-title">
               Introducing an extensible editor
-            </h4>
+            </h3>
             <p class="features-section__item-description">
               Blogr features an exceedingly intuitive interface which lets you
               focus on one thing: creating content. The editor supports
@@ -161,9 +210,9 @@
             </p>
           </li>
           <li class="features-section__item">
-            <h4 class="features-section__item-title">
+            <h3 class="features-section__item-title">
               Robust content management
-            </h4>
+            </h3>
             <p class="features-section__item-description">
               Flexible content management enables users to easily move through
               posts. Increase the usability of your blog by adding customized
@@ -175,16 +224,18 @@
       </div>
     </section>
 
-    <section class="infrastructure-section">
+    <section class="infrastructure-section" aria-labelledby="infrastructure-title">
       <img
         class="infrastructure-section__background-image"
         src="./images/bg-pattern-circles.svg"
-        alt="Circles image"
+        alt=""
+        aria-hidden="true"
+        loading="lazy"
       />
       <div class="infrastructure-section__content">
-        <h3 class="infrastructure-section__title">
+        <h2 class="infrastructure-section__title" id="infrastructure-title">
           State of the Art Infrastructure
-        </h3>
+        </h2>
         <p class="infrastructure-section__description">
           With reliability and speed in mind, worldwide data centers provide the
           backbone for ultra-fast connectivity. This ensures your site will load
@@ -198,16 +249,17 @@
       <img
         class="tools-section__image--phones"
         src="./images/illustration-phones.svg"
-        alt="Phones image"
+        alt="Illustration of phones"
+        loading="lazy"
       />
       <img
         class="tools-section__image--laptop"
         src="./images/illustration-laptop-desktop.svg"
-        alt="Laptop image"
+        alt="Illustration of a laptop"
       />
       <ul class="tools-section__list">
         <li class="tools-section__item">
-          <h4 class="tools-section__item-title">Free, open, simple</h4>
+          <h2 class="tools-section__item-title">Free, open, simple</h2>
           <p class="tools-section__item-description">
             Blogr is a free and open source application backed by a large
             community of helpful developers. It supports features such as code
@@ -218,7 +270,7 @@
           </p>
         </li>
         <li class="tools-section__item">
-          <h4 class="tools-section__item-title">Powerful tooling</h4>
+          <h2 class="tools-section__item-title">Powerful tooling</h2>
           <p class="tools-section__item-description">
             Batteries included. We built a simple and straightforward CLI tool
             that makes customization and deployment a breeze, but capable of
@@ -228,9 +280,14 @@
       </ul>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
       <div class="footer__logo">
-        <img class="footer__logo-image" src="./images/logo.svg" alt="Footer logo" />
+        <img
+          class="footer__logo-image"
+          src="./images/logo.svg"
+          alt="Footer logo"
+          loading="lazy"
+        />
       </div>
       <div class="footer__content">
         <ul class="footer__list">

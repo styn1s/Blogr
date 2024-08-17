@@ -439,6 +439,8 @@ body {
     float: right;
     margin-right: 100px;
     cursor: pointer;
+    background-color: transparent;
+    border: none;
   }
 
   .nav__exit-btn {
@@ -447,6 +449,8 @@ body {
     right: 103px;
     top: 56px;
     cursor: pointer;
+    background-color: transparent;
+    border: none;
   }
 
   .main-content {
