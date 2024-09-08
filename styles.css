@@ -286,6 +286,7 @@ body {
 }
 
 .features-section {
+  height: 58.75rem;
   color: var(--heading-color);
   overflow: hidden;
 }
@@ -298,7 +299,7 @@ body {
 }
 
 .features-section__image {
-  top: 5rem;
+  top: 3.5rem;
   right: -16.875rem;
   width: 55rem;
 }
@@ -379,7 +380,7 @@ body {
 .tools-section__list {
   float: right;
   width: 35%;
-  margin: 15rem 12.5rem 0 0;
+  margin: 18rem 12.5rem 0 0;
   padding: 0;
 }
 
@@ -435,6 +436,58 @@ body {
 
 .footer__item:first-child a {
   color: var(--light-color);
+}
+
+@media screen and (min-width: 2000px) {
+  .header__background {
+    top: -120rem;
+    width: 280rem;
+    left: -30rem;
+  }
+
+  .features-section__image {
+    right: 10rem;
+  }
+
+  .features-section__list {
+    width: 27%;
+    margin-left: 25rem;
+  }
+
+  .infrastructure-section__background-image {
+    left: 30rem;
+  }
+
+  .infrastructure-section__content {
+    right: 18rem;
+    width: 25%;
+  }
+
+  .tools-section__list {
+    width: 25%;
+    margin-right: 18rem;
+  }
+
+  .tools-section__image--phones {
+    left: 43rem;
+  }
+
+  .tools-section__image--laptop {
+    left: 20rem;
+  }
+
+  .footer {
+    justify-content: center;
+    gap: 20rem;
+  }
+
+  .footer__logo-image {
+    padding-left: 0;
+  }
+
+  .footer__content {
+    gap: 20rem;
+  }
 }
 
 @media screen and (max-width: 1440px) {
