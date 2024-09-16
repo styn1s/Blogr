@@ -103,7 +103,7 @@ body {
 .mobile-menu,
 .mobile-menu__nav-list,
 .mobile-menu__dropdown-list,
-.mobile-menu__auth-list, 
+.mobile-menu__auth-list,
 .hero,
 .footer__list {
   flex-direction: column;
@@ -115,12 +115,12 @@ body {
 }
 
 .dropdown__list a:hover,
-.footer__item:first-child a {
+.footer__item:first-child {
   font-weight: bold;
 }
 
 .nav__item > a:hover,
-.footer__item a:hover {
+.footer__item a:hover:not(.footer__item:first-child a) {
   text-decoration: underline;
 }
 
@@ -434,7 +434,7 @@ body {
   margin-bottom: 2.5rem;
 }
 
-.footer__item:first-child a {
+.footer__item:first-child {
   color: var(--light-color);
 }
 
@@ -597,23 +597,10 @@ body {
 }
 
 @media screen and (max-width: 1024px) {
-  .header__background {
-    top: -62.5rem;
-    left: -31.25rem;
-    width: 162.5rem;
-  }
-
-  .header__logo {
-    left: 6.4375rem;
-  }
-
-  .header__nav,
-  .mobile-menu {
-    float: right;
-  }
-
-  .header__nav {
-    padding: 4.75rem 6.4375rem 0 0;
+  .features-section__image,
+  .infrastructure-section__content,
+  .tools-section__image--laptop {
+    position: relative;
   }
 
   .nav__list,
@@ -621,12 +608,20 @@ body {
     display: none;
   }
 
-  .nav__burger-btn,
-  .nav__exit-btn {
-    padding: 0;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
+  .mobile-menu__nav-item,
+  .mobile-menu__auth-item,
+  section,
+  .features-section__content,
+  .tools-section__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer,
+  .footer__content {
+    flex-direction: column;
   }
 
   .mobile-menu,
@@ -638,10 +633,61 @@ body {
     align-items: center;
   }
 
-  .mobile-menu, 
+  .header__nav,
+  .mobile-menu {
+    float: right;
+  }
+
+  .mobile-menu__dropdown-list,
+  .mobile-menu__divider,
+  .infrastructure-section__content,
+  .tools-section__list {
+    margin: 0;
+  }
+
+  .tools-section__item-title,
+  .tools-section__item-description {
+    margin-bottom: 0;
+  }
+
+  .nav__burger-btn,
+  .nav__exit-btn {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .mobile-menu,
   .mobile-menu__dropdown-list,
   .mobile-menu__auth-list {
     gap: 1.25rem;
+  }
+
+  .features-section__item,
+  .infrastructure-section__content,
+  .tools-section__item,
+  .footer__list {
+    text-align: center;
+  }
+
+  .mobile-menu__nav-item a,
+  .mobile-menu__auth-item:first-child a {
+    color: var(--mobile-text-color);
+  }
+
+  .header__background {
+    top: -62.5rem;
+    left: -31.25rem;
+    width: 162.5rem;
+  }
+
+  .header__logo {
+    left: 6.4375rem;
+  }
+
+  .header__nav {
+    padding: 4.75rem 6.4375rem 0 0;
   }
 
   .mobile-menu {
@@ -665,13 +711,6 @@ body {
     gap: 1.875rem;
   }
 
-  .mobile-menu__dropdown-list,
-  .mobile-menu__divider,
-  .infrastructure-section__content,
-  .tools-section__list {
-    margin: 0;
-  }
-
   .mobile-menu__dropdown-list {
     width: 15.625rem;
     padding: 1.25rem 0;
@@ -683,11 +722,6 @@ body {
     width: 120%;
     height: 0.0625rem;
     background-color: var(--divider-color);
-  }
-
-  .mobile-menu__nav-item a,
-  .mobile-menu__auth-item:first-child a {
-    color: var(--mobile-text-color);
   }
 
   .mobile-menu__dropdown-item a {
@@ -703,30 +737,6 @@ body {
       var(--secondary-color)
     );
     border-radius: 2rem;
-  }
-
-  .features-section__image,
-  .infrastructure-section__content,
-  .tools-section__image--laptop {
-    position: relative;
-  }
-
-  .mobile-menu__nav-item,
-  .mobile-menu__auth-item,
-  section,
-  .features-section__content,
-  .tools-section__item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .features-section__item,
-  .infrastructure-section__content,
-  .tools-section__item,
-  .footer__list {
-    text-align: center;
   }
 
   .features-section {
@@ -776,11 +786,6 @@ body {
     width: 50%;
   }
 
-  .tools-section__item-title,
-  .tools-section__item-description {
-    margin-bottom: 0;
-  }
-
   .tools-section__item-title {
     font-size: 1.5em;
   }
@@ -800,11 +805,6 @@ body {
     width: 50rem;
   }
 
-  .footer,
-  .footer__content {
-    flex-direction: column;
-  }
-
   .footer__logo {
     margin: 6.25rem auto 0;
   }
@@ -820,6 +820,11 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  .hero__title,
+  .hero__subtitle {
+    text-align: center;
+  }
+
   .header {
     background-image: linear-gradient(
       var(--primary-color),
@@ -843,11 +848,6 @@ body {
 
   .hero {
     padding-top: 14.375rem;
-  }
-
-  .hero__title,
-  .hero__subtitle {
-    text-align: center;
   }
 
   .hero__title {
