@@ -1,4 +1,4 @@
-# Blogr Landing Page
+# ✍️ Blogr Landing Page
 This project is a modern and responsive landing page for Blogr, a fictional, next-generation publishing platform. It's designed to be a visually engaging entry point for a service that helps users build their online brand and grow their audience.
 
 ![Screenshot of the page](/images/screenshot-1.png)
